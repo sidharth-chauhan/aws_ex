@@ -1,5 +1,8 @@
 # aws_ex
 
+AWS_CLI
+-commands :- https://docs.aws.amazon.com/cli/latest/
+
 ---------------------------------------------------------------------------------
 aws cli install
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
@@ -26,6 +29,12 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envv
 -aws 
 -aws version
 --------------------------------------------------------------------------------
+
+s3 
+-env
+-env | grep AWS_CLI
+
+-aws s3
 
 
 
