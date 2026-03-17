@@ -8,7 +8,6 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 
-
 -aws sts get-caller-identity 
 
 
