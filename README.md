@@ -1,6 +1,6 @@
 # aws_ex
 
-
+---------------------------------------------------------------------------------
 aws cli install
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 -curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -24,4 +24,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envv
 
 -export AWS_CLI_AUTO_PROMPT=on-partial
 -aws 
+-aws version
+--------------------------------------------------------------------------------
+
+
+
 -
