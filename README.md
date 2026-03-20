@@ -58,6 +58,10 @@ remove add backet
 #upload folder  -> sync 
 -aws s3 sync images s3://prescription-images-dev-main     // copy image folder to s3 bucket 
 
+#download -> get-object
+-aws s3api get-object --bucket prescription-images-dev-main --key image.txt hello.txt 
+//download image.txt form s3 bucket and put in hello.txt 
+
 
 
 
