@@ -3,6 +3,10 @@
 AWS_CLI
 -commands :- https://docs.aws.amazon.com/cli/latest/
 
+
+
+#to see the list of file and there storage and all 
+-ls -ls
 ---------------------------------------------------------------------------------
 aws cli install
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
@@ -30,12 +34,30 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envv
 -aws version
 --------------------------------------------------------------------------------
 
-s3 
--env
+s3  - is high level and we can do work on s3api as well but might not have all the feat as s3 
+for env check 
+-env | grep AWS_
 -env | grep AWS_CLI
 
+remove add backet 
 -aws s3
 -aws s3 ls
--aws s3 rm s3://prescription-images-dev --recursive
+-aws s3 rm s3://prescription-images-dev --recursive   // delete inside first 
+-aws s3 rb s3://prescription-images-dev     //remove bucket
+
+
+#s3 api :- https://docs.aws.amazon.com/cli/latest/reference/
+-aws s3api
+-aws s3api create-bucket --bucket prescription-images-dev-main or also --region </val>
+-aws s3api list-buckets
+#if want list in yaml 
+-aws s3api list-buckets --output yaml
+
+
+
+#upload folder  -> sync 
+-aws s3 sync images s3://prescription-images-dev-main     // copy image folder to s3 bucket 
+
+
 
 
