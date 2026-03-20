@@ -9,3 +9,12 @@ Adress {1. #!/bin/bash 2. portable #!/usr/bin/env bash  }
 -ls -la s3
 
 
+//to execute the bash script 
+-   './s3/bash\ script/create-bucket'
+
+
+#EXECUTE bash 
+- './s3/bash\ script/create-bucket my-prescrition-example-dev'
+
+
+"--create-bucket-configuration="LocationConstraint=$REGION""  only if region outside us-east-1 

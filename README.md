@@ -49,6 +49,8 @@ remove add backet
 
 #s3 api :- https://docs.aws.amazon.com/cli/latest/reference/
 -aws s3api
+
+//create bucket 
 -aws s3api create-bucket --bucket prescription-images-dev-main or also --region </val>
 -aws s3api list-buckets
 #if want list in yaml 
