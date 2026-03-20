@@ -33,8 +33,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envv
 -aws 
 -aws version
 --------------------------------------------------------------------------------
-
+CLI
 s3  - is high level and we can do work on s3api as well but might not have all the feat as s3 
+
 for env check 
 -env | grep AWS_
 -env | grep AWS_CLI
@@ -63,5 +64,17 @@ remove add backet
 //download image.txt form s3 bucket and put in hello.txt -> confirm with "ls -ls" 
 
 
+#upload file -> put-object 
+-aws s3api put-object --bucket prescription-images-dev-main --key hello.text --content-type plain/txt  --body hello.txt  
+//upload hello.txt file to the bucket 
 
 
+
+
+//list-object or  (list-object-v2)                 
+-aws s3api list-objects --bucket prescription-images-dev-main
+-aws s3api list-objects-v2 --bucket prescription-images-dev-main
+
+-aws s3api list-objects --bucket prescription-images-dev-main --query Contents[].Key
+
+--------------------------------------------------------------------------------------
