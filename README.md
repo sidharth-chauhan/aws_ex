@@ -35,7 +35,7 @@ s3
 -env | grep AWS_CLI
 
 -aws s3
+-aws s3 ls
+-aws s3 rm s3://prescription-images-dev --recursive
 
 
-
--
