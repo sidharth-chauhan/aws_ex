@@ -1,5 +1,6 @@
 #!/usr/bin/env bash 
 
+echo "deleting bucket - $1"
 
 # check for bucket name (argument )
 
@@ -9,7 +10,12 @@ if [ -z "$1" ]; then
 fi
 REGION="ca-central-1"
 BUCKET_NAME=$1
-aws s3api create-bucket \
+aws s3api delete-bucket \
  --bucket $BUCKET_NAME \
- --create-bucket-configuration="LocationConstraint=$REGION" #only if region outside 'us-east-1'
+
+  
+
+# to run
+# ./s3/bash_script/create-bucket my-unique-bucket-name-1234
+
 

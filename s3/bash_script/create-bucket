@@ -1,0 +1,23 @@
+#!/usr/bin/env bash 
+
+
+# check for bucket name (argument )
+
+echo "creating bucket - $1"
+if [ -z "$1" ]; then
+  echo "provide bucket name - "
+  exit 1
+fi
+REGION="ca-central-1"
+BUCKET_NAME=$1
+aws s3api create-bucket \
+ --bucket "$BUCKET_NAME" \
+ --create-bucket-configuration "LocationConstraint=$REGION" \
+ --query Location \
+ --output text
+  
+
+# to run
+# ./s3/bash_script/create-bucket my-unique-bucket-name-1234
+
+

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash 
+
+echo "list bucket - $1"
+
+# check for bucket name (argument )
+
+if [ -z "$1" ]; then
+  echo "provide bucket name - "
+  exit 1
+fi
+REGION="ca-central-1"
+BUCKET_NAME=$1
+aws s3api list-objects \
+ --bucket $BUCKET_NAME 
+
+  
+
+# to run
+# ./s3/bash_script/create-bucket my-unique-bucket-name-1234
+
+
