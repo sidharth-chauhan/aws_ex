@@ -1,10 +1,21 @@
 #!/usr/bin/env bash 
 
 # where we will store these files 
-OUTPUT_DIR="/temp/bash_script"
+OUTPUT_DIR="./tmp/files"
 
-#create output folder 
+rm -r $OUTPUT_DIR
+
 mkdir -p $OUTPUT_DIR
 
-NUM_FILES=$((RANDOM % 6 + 5)) # generate a random number between 5 and 10
+for((i=1; i<=10; i++));
+do 
+  touch "$OUTPUT_DIR/file_$i.txt"
+  echo "file_$i.txt" > "$OUTPUT_DIR/file_$i.txt"
+done
+
+
+
+
+
+
 
