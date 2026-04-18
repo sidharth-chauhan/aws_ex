@@ -11,7 +11,7 @@ async function uploadObj(){
 
     const data=new PutObjectCommand({
       Bucket: "my-new-bucket-new-live-sidharth",
-      Key: "file1.txt",
+      Key: "file3.txt",
       Body: fs.createReadStream("../../../hello.txt")
     });
 

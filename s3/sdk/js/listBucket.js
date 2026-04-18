@@ -8,9 +8,11 @@ const s3Clinet=new S3Client({
 // list of bucket 
 async function listBucket(){
   try{
-    const response= await s3Clinet.send(
-      new ListBucketsCommand({})
-    );
+    // const response= await s3Clinet.send(
+    //   new ListBucketsCommand({})
+    // );
+    const data=new ListBucketsCommand({});
+    const response=await s3Clinet.send(data);
     //console.log(response);
     //console.log("repsonse",response.Buckets);
     for (let bucket of response.Buckets){
