@@ -99,3 +99,23 @@ jq- brew install jq
 ---
 
 # SDK
+
+- https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/s3-example-creating-buckets.html
+
+---
+
+# iac
+
+- CLOUDFORMATION
+
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-s3-bucket.html#aws-resource-s3-bucket--examples
+
+- TERRAFORM
+  install cli -> https://developer.hashicorp.com/terraform/install
+
+  registry -> https://registry.terraform.io/providers/hashicorp/aws/latest
+
+  - terraform init
+  - terraform plan
+  - terraform apply
+  - terraform destroy

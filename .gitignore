@@ -34,3 +34,15 @@ coverage/
 
 # Package lock backup files
 package-lock.json.bak
+
+# -----------------------------
+# Terraform
+# -----------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
