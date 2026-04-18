@@ -3,20 +3,18 @@
 AWS_CLI
 -commands :- https://docs.aws.amazon.com/cli/latest/
 
-
-
-#to see the list of file and there storage and all 
+#to see the list of file and there storage and all
 -ls -ls
----------------------------------------------------------------------------------
+
+---
+
 aws cli install
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 -curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 
-
--aws sts get-caller-identity 
-
+-aws sts get-caller-identity
 
 Aws env:- https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-envvars.html
 
@@ -26,57 +24,78 @@ Aws env:- https://docs.aws.amazon.com/cli/v1/userguide/cli-configure-envvars.htm
 
 -aws s3 ls
 
-autorpomot for aws cli 
+autorpomot for aws cli
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envvars-list-aws_cli_auto_prompt
 
 -export AWS_CLI_AUTO_PROMPT=on-partial
--aws 
+-aws
 -aws version
---------------------------------------------------------------------------------
-CLI
-s3  - is high level and we can do work on s3api as well but might not have all the feat as s3 
 
-for env check 
--env | grep AWS_
+---
+
+CLI
+s3 - is high level and we can do work on s3api as well but might not have all the feat as s3
+
+for env check
+-env | grep AWS\_
 -env | grep AWS_CLI
 
-remove add backet 
+remove add backet
 -aws s3
 -aws s3 ls
--aws s3 rm s3://prescription-images-dev --recursive   // delete inside first 
--aws s3 rb s3://prescription-images-dev     //remove bucket
+-aws s3 rm s3://prescription-images-dev --recursive // delete inside first
+-aws s3 rb s3://prescription-images-dev //remove bucket
 
+# s3 api :- https://docs.aws.amazon.com/cli/latest/reference/
 
-#s3 api :- https://docs.aws.amazon.com/cli/latest/reference/
 -aws s3api
 
-//create bucket 
+//create bucket
 -aws s3api create-bucket --bucket prescription-images-dev-main or also --region </val>
 -aws s3api list-buckets
-#if want list in yaml 
+#if want list in yaml
 -aws s3api list-buckets --output yaml
 
-
-
-#upload folder  -> sync 
--aws s3 sync images s3://prescription-images-dev-main     // copy image folder to s3 bucket 
+#upload folder -> sync
+-aws s3 sync images s3://prescription-images-dev-main // copy image folder to s3 bucket
 
 #download -> get-object
--aws s3api get-object --bucket prescription-images-dev-main --key image.txt hello.txt 
-//download image.txt form s3 bucket and put in hello.txt -> confirm with "ls -ls" 
+-aws s3api get-object --bucket prescription-images-dev-main --key image.txt hello.txt
+//download image.txt form s3 bucket and put in hello.txt -> confirm with "ls -ls"
 
+# upload file -> put-object
 
-#upload file -> put-object 
--aws s3api put-object --bucket prescription-images-dev-main --key hello.text --content-type plain/txt  --body hello.txt  
-//upload hello.txt file to the bucket 
+-aws s3api put-object --bucket prescription-images-dev-main --key hello.text --content-type plain/txt --body hello.txt  
+//upload hello.txt file to the bucket
 
-
-
-
-//list-object or  (list-object-v2)                 
+//list-object or (list-object-v2)  
 -aws s3api list-objects --bucket prescription-images-dev-main
 -aws s3api list-objects-v2 --bucket prescription-images-dev-main
 
 -aws s3api list-objects --bucket prescription-images-dev-main --query Contents[].Key
 
---------------------------------------------------------------------------------------
+---
+
+# check objects in the bucket
+
+aws s3api list-objects --bucket google-summer-goodyaar-1
+
+jq- brew install jq
+
+---
+
+#PowerShell (scripts of powershell preferred)
+
+-brew install powershell
+
+# https://docs.aws.amazon.com/powershell/v5/userguide/install-aws.tools-on-linux-macos.html
+
+# https://docs.aws.amazon.com/powershell/v5/reference/items/pstoolsref-welcome.html
+
+-pwsh
+-Install-Module -Name AWS.Tools.Installer
+-Install-AWSToolsModule AWS.Tools.S3 -CleanUp
+
+---
+
+# SDK

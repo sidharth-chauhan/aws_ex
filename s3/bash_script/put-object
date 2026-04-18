@@ -40,3 +40,8 @@ aws s3api put-object \
   --key "$OBJECT_KEY" \
   --content-type "$CONTENT_TYPE" \
   --body "$FILE_NAME"
+
+
+#./s3/bash_script/put-object <bucket-name> <file-path> <content-type>
+
+#./s3/bash_script/put-object prescription-images-dev-main hello.txt plain/txt

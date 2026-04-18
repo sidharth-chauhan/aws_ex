@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-echo "listing bucket "
+echo "sorted bucket according to creation"
 
 
 aws s3api list-buckets \
@@ -13,3 +13,9 @@ aws s3api list-buckets \
     else .[].Name
     end
 '
+
+
+
+
+
+#./s3/bash_script/list-object

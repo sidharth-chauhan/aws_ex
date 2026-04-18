@@ -1,0 +1,36 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables (secrets)
+.env
+.env.*
+
+# macOS system files
+.DS_Store
+
+# Build / temp files
+dist/
+build/
+tmp/
+temp/
+
+# AWS credentials (never commit)
+.aws/
+
+# OS files
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Package lock backup files
+package-lock.json.bak
