@@ -106,16 +106,28 @@ jq- brew install jq
 
 # iac
 
-- CLOUDFORMATION
+1. CLOUDFORMATION
 
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-s3-bucket.html#aws-resource-s3-bucket--examples
 
-- TERRAFORM
-  install cli -> https://developer.hashicorp.com/terraform/install
+2. TERRAFORM
+   install cli -> https://developer.hashicorp.com/terraform/install
 
-  registry -> https://registry.terraform.io/providers/hashicorp/aws/latest
+registry -> https://registry.terraform.io/providers/hashicorp/aws/latest
 
-  - terraform init
-  - terraform plan
-  - terraform apply
-  - terraform destroy
+- terraform init
+- terraform plan
+- terraform apply
+- terraform destroy
+
+3. CDK - CLOUD DEVELOPER KIT (js)
+
+# https://github.com/aws/aws-cdk#getting-started
+
+install and initalize a project
+s3/iac/cdk/lib
+-npm i -g aws-cdk
+-cdk init sample-app --language=typescript
+-cdk synth
+-cdk deploy
+-cdk destroy
