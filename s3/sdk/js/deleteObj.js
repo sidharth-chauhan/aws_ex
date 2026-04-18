@@ -5,12 +5,14 @@ const s3Client=new S3Client({
   region: 'us-east-1'
 })
 
+const bucketName=process.argv[2]
+const objName=process.argv[3]
 
 async function deleteObj(){
   try{
     const data=new DeleteObjectCommand({
-      Bucket: "my-new-bucket-new-live-sidharth",
-      Key: "file1.txt"
+      Bucket: bucketName,
+      Key: objName
     });
 
     const response = await s3Client.send(data);

@@ -5,10 +5,11 @@ const s3Client=new S3Client({
   region: 'us-east-1'
 })
 
+const bucketName=process.argv[2]
 async function cleanBucket(){
   try{
     const listobj=new ListObjectsV2Command({
-      Bucket: "my-new-bucket-new-live-sidharth"
+      Bucket: bucketName
     });
     const responselist=await s3Client.send(listobj);
     for (let obj of responselist.Contents){
