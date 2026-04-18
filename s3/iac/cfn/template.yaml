@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An example template for creating an S3 bucket 
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    #aws will genrate random nanme if not pass
+    

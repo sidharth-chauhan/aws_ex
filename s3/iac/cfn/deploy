@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "deploying cloudformation stack "
+
+
+STACK_NAME="cnfn-s3-bucket"
+
+aws cloudformation deploy \
+  --template-file template.yaml \
+  --region us-east-1 \
+  --stack-name $STACK_NAME
+  
+
