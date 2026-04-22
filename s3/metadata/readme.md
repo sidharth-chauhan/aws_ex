@@ -15,3 +15,8 @@
 # get metadata through head object
 
 - aws s3api head-object --bucket metadata-sid-bucket-001 --key hello.txt
+
+# clean
+
+aws s3 rm s3://metadata-sid-bucket-001/hello.txt
+aws s3 rb s3://metadata-sid-bucket-001
