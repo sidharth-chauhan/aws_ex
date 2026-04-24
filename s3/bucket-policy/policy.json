@@ -7,12 +7,6 @@
          "Resource": "arn:aws:s3:::example-bucket-policy-001/*"
       },
       {
-         "Effect": "Deny",
-         "Principal": "*",
-         "Action": "s3:GetObject",
-         "Resource": "arn:aws:s3:::amzn-s3-demo-bucket/MySecretFolder/*"
-      },
-      {
          "Effect": "Allow",
          "Principal": {
             "AWS": "arn:aws:iam::123456789012:root"
@@ -22,6 +16,6 @@
             "s3:PutObject"
          ],
          "Resource": "arn:aws:s3:::amzn-s3-demo-bucket/*"
-      }
+      } 
    ]
 }
