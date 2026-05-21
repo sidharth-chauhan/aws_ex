@@ -28,5 +28,4 @@ aws s3api put-object \
  --bucket checksums-mybucket-ohhhsid-00011 \
  --key myfilecrc32.txt \
  --body myfile.txt \
- --checksum-algorithm CRC32 \
- --checksum-crc32 G7dRlw==
+
