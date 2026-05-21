@@ -1,0 +1,38 @@
+#!/usr/bin/env bash 
+
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] || [ -z "$5" ]; then
+  echo "usage: ./delete_vpc <vpc-id> <subnet-id> <igw-id> <route-table-id> <association-id>"
+  exit 1
+else
+  export vpc_id="$1"
+  export subnet_id="$2"
+  export igw_id="$3"
+  export route_table_id="$4"
+  export association_id="$5"
+fi
+
+# disassociate subnet from route table
+aws ec2 disassociate-route-table \
+--association-id $association_id
+
+# delete route from RT
+aws ec2 delete-route \
+--route-table-id $route_table_id \
+--destination-cidr-block 0.0.0.0/0
+
+# delete subnet
+aws ec2 delete-subnet \
+--subnet-id $subnet_id
+
+# detach igw
+aws ec2 detach-internet-gateway \
+--internet-gateway-id $igw_id \
+--vpc-id $vpc_id
+
+# delete igw
+aws ec2 delete-internet-gateway \
+--internet-gateway-id $igw_id
+
+# delete vpc
+aws ec2 delete-vpc \
+--vpc-id $vpc_id
