@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-aws cloudformation deploy \
-  --template-file  template.yaml \
-  --stack-name my-sts-001 \
-  --capabilities CAPABILITY_IAM
-  
